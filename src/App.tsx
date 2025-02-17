@@ -1,13 +1,19 @@
-import { Outlet } from "react-router";
-import "./App.css";
+import { Outlet, useLocation } from "react-router";
+
 import { Header } from "./components/header/header";
 import { Footer } from "./components/footer/footer";
 
 function App() {
+  const location = useLocation();
+
   return (
     <>
       <Header />
-      <Outlet />
+      {location.pathname === "/" ? (
+        <h1>Выберите одну категорию</h1>
+      ) : (
+        <Outlet />
+      )}
       <Footer />
     </>
   );

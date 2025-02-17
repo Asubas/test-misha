@@ -1,0 +1,17 @@
+.paginationWrapper {
+  width: 25%;
+  margin: 10px;
+}
+
+.paginationList {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.paginationItem {
+  width: 25px;
+}
+
+.activeButton {
+  background-color: #ebb655;
+}

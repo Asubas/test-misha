@@ -3,91 +3,91 @@
     {
       "id": 1,
       "name": "Пицца",
-      "image": "https://images.unsplash.com/photo-1513104890138-7c749659a591",
+      "description": "Классическая итальянская пицца с тонким тестом, томатным соусом и сыром моцарелла.",
       "price": 850
     },
     {
       "id": 2,
       "name": "Бургер",
-      "image": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd",
+      "description": "Сочный бургер с говяжьей котлетой, свежими овощами и сыром.",
       "price": 450
     },
     {
       "id": 3,
       "name": "Суши",
-      "image": "https://images.unsplash.com/photo-1611143669185-af224c5e3252",
+      "description": "Традиционные японские суши с лососем и рисом.",
       "price": 1200
     },
     {
       "id": 4,
       "name": "Салат Цезарь",
-      "image": "https://images.unsplash.com/photo-1540420773420-3366772f4999",
+      "description": "Салат с курицей, листьями салата, сухариками и соусом Цезарь.",
       "price": 350
     },
     {
       "id": 5,
       "name": "Паста Карбонара",
-      "image": "https://images.unsplash.com/photo-1551183053-bf91a1d81141",
+      "description": "Итальянская паста с беконом, сыром пармезан и сливочным соусом.",
       "price": 700
     },
     {
       "id": 6,
       "name": "Стейк",
-      "image": "https://images.unsplash.com/photo-1600891964092-4316c288032e",
+      "description": "Сочный стейк из говядины, приготовленный на гриле.",
       "price": 1500
     },
     {
       "id": 7,
       "name": "Тайская лапша",
-      "image": "https://images.unsplash.com/photo-1563245372-f21724e3856d",
+      "description": "Острая тайская лапша с курицей и овощами.",
       "price": 600
     },
     {
       "id": 8,
       "name": "Суп Том-Ям",
-      "image": "https://images.unsplash.com/photo-1585032226651-759b368d7246",
+      "description": "Традиционный тайский суп с креветками, грибами и кокосовым молоком.",
       "price": 550
     },
     {
       "id": 9,
       "name": "Куриные крылышки",
-      "image": "https://images.unsplash.com/photo-1562967914-608f82629710",
+      "description": "Хрустящие куриные крылышки в остром соусе.",
       "price": 400
     },
     {
       "id": 10,
       "name": "Фалафель",
-      "image": "https://images.unsplash.com/photo-1625938144745-fdc08a1f78ae",
+      "description": "Жареные шарики из нута с пряностями, подаются с соусом.",
       "price": 300
     },
     {
       "id": 11,
       "name": "Роллы с лососем",
-      "image": "https://images.unsplash.com/photo-1617196035154-1e1b6b19750e",
+      "description": "Роллы с лососем, авокадо и сливочным сыром.",
       "price": 900
     },
     {
       "id": 12,
       "name": "Шаурма",
-      "image": "https://images.unsplash.com/photo-1631515243349-e0cb75fb8d3a",
+      "description": "Шаурма с курицей, свежими овощами и соусом.",
       "price": 250
     },
     {
       "id": 13,
       "name": "Пельмени",
-      "image": "https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec",
+      "description": "Домашние пельмени с мясной начинкой, подаются со сметаной.",
       "price": 500
     },
     {
       "id": 14,
       "name": "Креветки гриль",
-      "image": "https://images.unsplash.com/photo-1605209671121-67020c996f16",
+      "description": "Креветки, приготовленные на гриле с чесночным соусом.",
       "price": 1300
     },
     {
       "id": 15,
       "name": "Чизкейк",
-      "image": "https://images.unsplash.com/photo-1578775887804-699de7086ff9",
+      "description": "Нежный чизкейк с ягодным соусом.",
       "price": 400
     }
   ],
@@ -95,91 +95,91 @@
     {
       "id": 1,
       "name": "Футболка",
-      "image": "https://images.unsplash.com/photo-1581655353564-df123a1eb820",
+      "description": "Стильная футболка из мягкого хлопка.",
       "price": 1200
     },
     {
       "id": 2,
       "name": "Джинсы",
-      "image": "https://images.unsplash.com/photo-1541099649105-f69ad21f3246",
+      "description": "Удобные джинсы классического кроя.",
       "price": 3000
     },
     {
       "id": 3,
       "name": "Куртка",
-      "image": "https://images.unsplash.com/photo-1591047139829-d91aecb6caea",
+      "description": "Теплая куртка для холодной погоды.",
       "price": 6000
     },
     {
       "id": 4,
       "name": "Платье",
-      "image": "https://images.unsplash.com/photo-1572804013309-59a88b7e92f1",
+      "description": "Легкое платье с романтичным дизайном.",
       "price": 4500
     },
     {
       "id": 5,
       "name": "Рубашка",
-      "image": "https://images.unsplash.com/photo-1620012253295-c15cc3b65d8f",
+      "description": "Элегантная рубашка для деловых встреч.",
       "price": 1800
     },
     {
       "id": 6,
       "name": "Юбка",
-      "image": "https://images.unsplash.com/photo-1525450824786-227cbef70703",
+      "description": "Модная юбка средней длины.",
       "price": 2500
     },
     {
       "id": 7,
       "name": "Свитшот",
-      "image": "https://images.unsplash.com/photo-1622560484053-fb1c43d753f7",
+      "description": "Уютный свитшот для повседневной носки.",
       "price": 2200
     },
     {
       "id": 8,
       "name": "Кроссовки",
-      "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff",
+      "description": "Комфортные кроссовки для спорта и прогулок.",
       "price": 5000
     },
     {
       "id": 9,
       "name": "Шапка",
-      "image": "https://images.unsplash.com/photo-1618354691373-d851c5c966a3",
+      "description": "Тёплая шапка для зимних холодов.",
       "price": 800
     },
     {
       "id": 10,
       "name": "Шорты",
-      "image": "https://images.unsplash.com/photo-1594631252845-29fc4cc8cde9",
+      "description": "Лёгкие шорты для летнего отдыха.",
       "price": 1500
     },
     {
       "id": 11,
       "name": "Пальто",
-      "image": "https://images.unsplash.com/photo-1595777457583-95e059d581b8",
+      "description": "Стильное пальто для осенне-зимнего периода.",
       "price": 7000
     },
     {
       "id": 12,
       "name": "Галстук",
-      "image": "https://images.unsplash.com/photo-1596755094514-f87e34085b2c",
+      "description": "Классический галстук для формальных мероприятий.",
       "price": 900
     },
     {
       "id": 13,
       "name": "Носки",
-      "image": "https://images.unsplash.com/photo-1586363104862-3a5e2ab60d99",
+      "description": "Удобные носки из дышащего материала.",
       "price": 300
     },
     {
       "id": 14,
       "name": "Ремень",
-      "image": "https://images.unsplash.com/photo-1618354691551-ccf3cc6bc8d4",
+      "description": "Качественный ремень из натуральной кожи.",
       "price": 600
     },
     {
       "id": 15,
       "name": "Сумка",
-      "image": "https://images.unsplash.com/photo-1591348278863-a8fb3887e2aa",
+      "description": "Функциональная сумка для повседневного использования.",
       "price": 3500
     }
   ],
@@ -187,91 +187,91 @@
     {
       "id": 1,
       "name": "Смартфон",
-      "image": "https://images.unsplash.com/photo-1580910051074-3eb694886505",
+      "description": "Современный смартфон с высоким разрешением и мощным процессором.",
       "price": 30000
     },
     {
       "id": 2,
       "name": "Ноутбук",
-      "image": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853",
+      "description": "Мощный ноутбук с большим экраном и высокой производительностью.",
       "price": 60000
     },
     {
       "id": 3,
       "name": "Наушники",
-      "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e",
+      "description": "Беспроводные наушники с качественным звуком и длительным временем работы.",
       "price": 5000
     },
     {
       "id": 4,
       "name": "Планшет",
-      "image": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0",
+      "description": "Удобный планшет для работы и развлечений с высоким разрешением.",
       "price": 25000
     },
     {
       "id": 5,
       "name": "Умные часы",
-      "image": "https://images.unsplash.com/photo-1546868871-7041f2a55e12",
+      "description": "Функциональные умные часы с мониторингом здоровья и уведомлениями.",
       "price": 12000
     },
     {
       "id": 6,
       "name": "Фотоаппарат",
-      "image": "https://images.unsplash.com/photo-1516035069371-29a1b244cc32",
+      "description": "Качественный фотоаппарат для профессиональной съемки.",
       "price": 45000
     },
     {
       "id": 7,
       "name": "Игровая консоль",
-      "image": "https://images.unsplash.com/photo-1605901309584-818e25960a8f",
+      "description": "Современная игровая консоль с поддержкой 4K-графики.",
       "price": 40000
     },
     {
       "id": 8,
       "name": "Монитор",
-      "image": "https://images.unsplash.com/photo-1586210579191-33b45e38fa2c",
+      "description": "Большой монитор с высоким разрешением и быстрым откликом.",
       "price": 18000
     },
     {
       "id": 9,
       "name": "Клавиатура",
-      "image": "https://images.unsplash.com/photo-1618384887929-16ec33fab9ef",
+      "description": "Удобная клавиатура с подсветкой и механическими клавишами.",
       "price": 3000
     },
     {
       "id": 10,
       "name": "Мышь",
-      "image": "https://images.unsplash.com/photo-1615663245857-ac93bb7c39e7",
+      "description": "Эргономичная мышь с высокой точностью и скоростью.",
       "price": 1500
     },
     {
       "id": 11,
       "name": "Колонка",
-      "image": "https://images.unsplash.com/photo-1546435770-a3e426bf472b",
+      "description": "Портативная колонка с чистым звуком и хорошей мощностью.",
       "price": 8000
     },
     {
       "id": 12,
       "name": "Роутер",
-      "image": "https://images.unsplash.com/photo-1597764690528-9440f527b092",
+      "description": "Современный роутер с высокой скоростью передачи данных.",
       "price": 2500
     },
     {
       "id": 13,
       "name": "Внешний жесткий диск",
-      "image": "https://images.unsplash.com/photo-1621351183012-e2f9972dd9bf",
+      "description": "Внешний жесткий диск для хранения больших объемов данных.",
       "price": 5000
     },
     {
       "id": 14,
       "name": "Микрофон",
-      "image": "https://images.unsplash.com/photo-1598327105666-5b89351aff97",
+      "description": "Качественный микрофон для записи голоса и музыки.",
       "price": 7000
     },
     {
       "id": 15,
       "name": "Камера видеонаблюдения",
-      "image": "https://images.unsplash.com/photo-1595341883846-a365d57f4a7c",
+      "description": "Надежная камера видеонаблюдения с ночным видением.",
       "price": 10000
     }
   ]

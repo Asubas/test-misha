@@ -1,3 +1,9 @@
+import "./footer.css";
+
 export function Footer() {
-  return <p>create by Леха</p>;
+  return (
+    <footer>
+      <p>create by Леха</p>
+    </footer>
+  );
 }

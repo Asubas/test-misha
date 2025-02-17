@@ -8,7 +8,6 @@ async function getProducts(currentProduct: string) {
     })
     .then((resData) => {
       if (resData) {
-        console.log(resData);
         return resData;
       } else {
         console.log("Данные отсутствуют");

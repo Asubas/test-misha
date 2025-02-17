@@ -1,0 +1,28 @@
+.elementWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+}
+
+.elementList {
+  display: flex;
+  height: 100%;
+  gap: 20px;
+  margin: 20px;
+  justify-content: space-evenly;
+}
+
+.productItem {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+  border: 1px solid #000000;
+  max-width: 30%;
+  padding: 10px;
+}
