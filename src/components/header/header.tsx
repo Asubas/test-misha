@@ -1,7 +1,6 @@
 import { NavLink } from "react-router";
 
 export function Header() {
-  console.log("Header rendered");
   return (
     <>
       <header>This is header</header>
