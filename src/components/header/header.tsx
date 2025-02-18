@@ -24,7 +24,7 @@ export function Header() {
               <NavLink to="/electronics">Электроника</NavLink>
             </li>
             <li className="basket" onClick={showBasket}>
-              Корзина
+              Избранное
             </li>
           </ul>
         </nav>

@@ -12,7 +12,7 @@ export function Basket({ activeBasket }: { activeBasket: boolean }) {
   return (
     <>
       <div className={activeBasket ? "basketSideBar" : "active basketSideBar"}>
-        <p className="basketSideBarTitle">Favorite products</p>
+        <p className="basketSideBarTitle">Избранные продукты</p>
         {favoriteProducts.length > 0 ? (
           favoriteProducts.map((product) => (
             <div className="basketSideBarProduct" key={product.id}>
@@ -25,7 +25,7 @@ export function Basket({ activeBasket }: { activeBasket: boolean }) {
             </div>
           ))
         ) : (
-          <p className="emptyBasket">No favorite products</p>
+          <p className="emptyBasket">Нет избранных продуктов</p>
         )}
       </div>
     </>

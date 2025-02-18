@@ -3,7 +3,7 @@
   width: 200px;
   transition: 0.4s all linear;
   position: fixed;
-  background-color: #6a6a6a;
+  background-color: #9d9999;
   right: 10px;
   top: 10%;
   border: 1px solid black;
@@ -17,7 +17,7 @@
 }
 
 .active.basketSideBar {
-  margin-right: -200px;
+  margin-right: -250px;
 }
 
 .basketSideBarTitle {
@@ -28,7 +28,6 @@
   text-align: center;
   border-radius: 0%;
   padding: 2px;
-  background-color: #6a6a6a;
 }
 
 .basketSideBarProduct {

@@ -13,8 +13,8 @@
 }
 
 body {
-  background-color: #6a6a6a;
-  color: #000000;
+  background-color: #45744d;
+  color: #ffffff;
 }
 
 ul {
@@ -25,21 +25,27 @@ ul {
 a {
   text-decoration: none;
   display: inline-block;
+  color: #ffffff;
 }
 
 a:visited {
-  color: #000000;
+  color: #ffffff;
 }
 
 a:hover {
   transform: scale(1.1);
-  color: #ebb655;
+  color: #daad86;
 }
 
 button {
   cursor: pointer;
+  background-color: #9d9999;
+  border: none;
+  padding: 4px;
+  color: #ffffff;
 }
 
 button:hover {
   transform: scale(1.1);
+  background-color: #daad86;
 }

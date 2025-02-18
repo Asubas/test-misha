@@ -3,10 +3,5 @@
 }
 
 .sortButton {
-  padding: 3px;
   margin-left: 10px;
-}
-
-.sortButton:hover {
-  background-color: #ebb655;
 }
