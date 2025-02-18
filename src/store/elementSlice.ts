@@ -15,7 +15,12 @@ const elementSlice = createSlice({
   } as ElementState,
   reducers: {
     addToFavorite(state, action) {
-      // state.favorites.push(action);
+      const someProduct = state.favorites.some(
+        (product) => product.id === action.payload.id
+      );
+      if (!someProduct) {
+        state.favorites.push(action.payload);
+      }
     },
   },
 });

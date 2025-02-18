@@ -1,64 +1,57 @@
 import "./element.css";
 import { useParams } from "react-router";
-// import { getProducts } from "../../utils/getProducts";
-// import { useEffect, useState } from "react";
-// import { IProduct } from "../../types/productInterface";
-// import { Pagination } from "../../components/pagination/pagination";
-// import { Sort } from "../../components/sort/sort";
+import { useEffect, useMemo, useState } from "react";
+import { Pagination } from "../../components/pagination/pagination";
+import { Sort } from "../../components/sort/sort";
 import { FavoriteButton } from "../../components/favorite/favoriteButton";
 import { useAppSelector } from "../../hooks";
+import { IProduct } from "../../types/productInterface";
 
 export function Element() {
-  const products = useAppSelector((state) => state.elements.elements);
   const params = useParams();
-  // const currentProduct = params;
-  // const [page, setCurrentPage] = useState(1);
-  // const [sortedProducts, setSortedProducts] = useState<IProduct[]>([]);
-  // const startIndex = (page - 1) * 4;
-  // const endIndex = startIndex + 4;
-  // const currentProducts = sortedProducts.slice(startIndex, endIndex);
+  const allProducts = useAppSelector((state) => state.elements.elements);
+  const products = useMemo(() => {
+    return allProducts.filter((product) => product.category === params.element);
+  }, [allProducts, params.element]);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [sortedProducts, setSortedProducts] = useState<IProduct[]>([]);
 
-  // useEffect(() => {
-  //   if (currentProduct) {
-  //     getProducts(currentProduct)
-  //       .then(async (data) => {
-  //         setSortedProducts(data);
-  //         setCurrentPage(1);
-  //       })
-  //       .catch((error) => {
-  //         console.error("Ошибка при загрузке данных:", error);
-  //       });
-  //   }
-  // }, [currentProduct]);
+  useEffect(() => {
+    setSortedProducts(products);
+    setCurrentPage(1);
+  }, [products]);
+
+  const itemsPerPage = 4;
+  const startIndex = (currentPage - 1) * itemsPerPage;
+  const endIndex = startIndex + itemsPerPage;
+  const currentProducts = sortedProducts.slice(startIndex, endIndex);
 
   return (
     <>
       {products.length > 0 ? (
         <div className="elementWrapper">
-          {/* <Sort
+          <Sort
             prod={products}
-            sortProducts={(sorted: IProduct[]) => {
+            sortProducts={(sorted) => {
               setSortedProducts(sorted);
               setCurrentPage(1);
             }}
-          /> */}
+          />
           <ul className="elementList">
-            {products
-              .filter((product) => product.category === params.element)
-              .map((product) => (
-                <li className="productItem" key={product.id}>
-                  {product.name}
-                  <p className="productDescription">{product.description}</p>
-                  <p className="productPrice">{product.price} руб</p>
-                  <FavoriteButton />
-                </li>
-              ))}
+            {currentProducts.map((product) => (
+              <li className="productItem" key={product.id}>
+                {product.name}
+                <p className="productDescription">{product.description}</p>
+                <p className="productPrice">{product.price} руб</p>
+                <FavoriteButton product={product} />
+              </li>
+            ))}
           </ul>
-          {/* <Pagination
-            currentPage={page}
-            totalPosts={sortedProducts.length}
+          <Pagination
+            currentPage={currentPage}
+            totalPosts={products.length}
             paginate={(page: number) => setCurrentPage(page)}
-          /> */}
+          />
         </div>
       ) : (
         <div>Список пуст!</div>
