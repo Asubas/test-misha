@@ -1,10 +1,11 @@
+import { useState } from "react";
 import "./header.css";
 import { NavLink } from "react-router";
+import { Basket } from "./basket/basket";
 
 export function Header() {
-  const showBasket = () => {
-    console.log("показать корзину");
-  };
+  const [activeBasket, setActiveBasket] = useState(false);
+  const showBasket = () => setActiveBasket((val) => !val);
   return (
     <>
       <header>
@@ -22,12 +23,12 @@ export function Header() {
             <li>
               <NavLink to="/electronics">Электроника</NavLink>
             </li>
-
             <li className="basket" onClick={showBasket}>
               Корзина
             </li>
           </ul>
         </nav>
+        <Basket activeBasket={activeBasket} />
       </header>
     </>
   );

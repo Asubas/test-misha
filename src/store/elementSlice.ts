@@ -1,4 +1,4 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { PayloadAction, createSlice } from "@reduxjs/toolkit";
 import { getProducts } from "../utils/getProducts";
 import { IProduct } from "../types/productInterface";
 
@@ -22,8 +22,13 @@ const elementSlice = createSlice({
         state.favorites.push(action.payload);
       }
     },
+    removeFromFavorite(state, action: PayloadAction<number>) {
+      state.favorites = state.favorites.filter(
+        (product) => product.id !== action.payload
+      );
+    },
   },
 });
 
-export const { addToFavorite } = elementSlice.actions;
+export const { addToFavorite, removeFromFavorite } = elementSlice.actions;
 export default elementSlice.reducer;

@@ -1,0 +1,68 @@
+.basketSideBar {
+  height: 45vh;
+  width: 200px;
+  transition: 0.4s all linear;
+  position: fixed;
+  background-color: #6a6a6a;
+  right: 10px;
+  top: 10%;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2%;
+  overflow-y: auto;
+  z-index: 2;
+}
+
+.active.basketSideBar {
+  margin-right: -200px;
+}
+
+.basketSideBarTitle {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  border-bottom: 1px solid black;
+  text-align: center;
+  border-radius: 0%;
+  padding: 2px;
+  background-color: #6a6a6a;
+}
+
+.basketSideBarProduct {
+  padding: 5px;
+  border-bottom: 1px solid black;
+  border-radius: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.productName {
+  padding: 2px;
+  margin-right: 5px;
+}
+
+.removeFromFavorite {
+  width: 15px;
+  height: 15px;
+  position: relative;
+  border: none;
+  background: inherit;
+  margin-left: 5px;
+}
+
+.removeFromFavorite::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: url("../../../assets/heart-remove-svgrepo-com.svg") no-repeat
+    center / contain;
+}
