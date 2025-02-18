@@ -1,5 +1,5 @@
-async function getProducts(currentProduct: string) {
-  return fetch(`http://localhost:3001/${currentProduct}`)
+async function getProducts(currentProduct: string = "") {
+  return fetch(`http://localhost:3001/elements/${currentProduct}`)
     .then((res) => {
       if (!res.ok) {
         throw new Error(`Ошибка при получении данных: ${res.statusText}`);

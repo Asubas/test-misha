@@ -1,278 +1,319 @@
 {
-  "food": [
+  "elements": [
     {
       "id": 1,
       "name": "Пицца",
       "description": "Классическая итальянская пицца с тонким тестом, томатным соусом и сыром моцарелла.",
-      "price": 850
+      "price": 850,
+      "category": "food"
     },
     {
       "id": 2,
       "name": "Бургер",
       "description": "Сочный бургер с говяжьей котлетой, свежими овощами и сыром.",
-      "price": 450
+      "price": 450,
+      "category": "food"
     },
     {
       "id": 3,
       "name": "Суши",
       "description": "Традиционные японские суши с лососем и рисом.",
-      "price": 1200
+      "price": 1200,
+      "category": "food"
     },
     {
       "id": 4,
       "name": "Салат Цезарь",
       "description": "Салат с курицей, листьями салата, сухариками и соусом Цезарь.",
-      "price": 350
+      "price": 350,
+      "category": "food"
     },
     {
       "id": 5,
       "name": "Паста Карбонара",
       "description": "Итальянская паста с беконом, сыром пармезан и сливочным соусом.",
-      "price": 700
+      "price": 700,
+      "category": "food"
     },
     {
       "id": 6,
       "name": "Стейк",
       "description": "Сочный стейк из говядины, приготовленный на гриле.",
-      "price": 1500
+      "price": 1500,
+      "category": "food"
     },
     {
       "id": 7,
       "name": "Тайская лапша",
       "description": "Острая тайская лапша с курицей и овощами.",
-      "price": 600
+      "price": 600,
+      "category": "food"
     },
     {
       "id": 8,
       "name": "Суп Том-Ям",
       "description": "Традиционный тайский суп с креветками, грибами и кокосовым молоком.",
-      "price": 550
+      "price": 550,
+      "category": "food"
     },
     {
       "id": 9,
       "name": "Куриные крылышки",
       "description": "Хрустящие куриные крылышки в остром соусе.",
-      "price": 400
+      "price": 400,
+      "category": "food"
     },
     {
       "id": 10,
       "name": "Фалафель",
       "description": "Жареные шарики из нута с пряностями, подаются с соусом.",
-      "price": 300
+      "price": 300,
+      "category": "food"
     },
     {
       "id": 11,
       "name": "Роллы с лососем",
       "description": "Роллы с лососем, авокадо и сливочным сыром.",
-      "price": 900
+      "price": 900,
+      "category": "food"
     },
     {
       "id": 12,
       "name": "Шаурма",
       "description": "Шаурма с курицей, свежими овощами и соусом.",
-      "price": 250
+      "price": 250,
+      "category": "food"
     },
     {
       "id": 13,
       "name": "Пельмени",
       "description": "Домашние пельмени с мясной начинкой, подаются со сметаной.",
-      "price": 500
+      "price": 500,
+      "category": "food"
     },
     {
       "id": 14,
       "name": "Креветки гриль",
       "description": "Креветки, приготовленные на гриле с чесночным соусом.",
-      "price": 1300
+      "price": 1300,
+      "category": "food"
     },
     {
       "id": 15,
       "name": "Чизкейк",
       "description": "Нежный чизкейк с ягодным соусом.",
-      "price": 400
-    }
-  ],
-  "clothes": [
+      "price": 400,
+      "category": "food"
+    },
     {
-      "id": 1,
+      "id": 16,
       "name": "Футболка",
       "description": "Стильная футболка из мягкого хлопка.",
-      "price": 1200
+      "price": 1200,
+      "category": "clothes"
     },
     {
-      "id": 2,
+      "id": 17,
       "name": "Джинсы",
       "description": "Удобные джинсы классического кроя.",
-      "price": 3000
+      "price": 3000,
+      "category": "clothes"
     },
     {
-      "id": 3,
+      "id": 18,
       "name": "Куртка",
       "description": "Теплая куртка для холодной погоды.",
-      "price": 6000
+      "price": 6000,
+      "category": "clothes"
     },
     {
-      "id": 4,
+      "id": 19,
       "name": "Платье",
       "description": "Легкое платье с романтичным дизайном.",
-      "price": 4500
+      "price": 4500,
+      "category": "clothes"
     },
     {
-      "id": 5,
+      "id": 20,
       "name": "Рубашка",
       "description": "Элегантная рубашка для деловых встреч.",
-      "price": 1800
+      "price": 1800,
+      "category": "clothes"
     },
     {
-      "id": 6,
+      "id": 21,
       "name": "Юбка",
       "description": "Модная юбка средней длины.",
-      "price": 2500
+      "price": 2500,
+      "category": "clothes"
     },
     {
-      "id": 7,
+      "id": 22,
       "name": "Свитшот",
       "description": "Уютный свитшот для повседневной носки.",
-      "price": 2200
+      "price": 2200,
+      "category": "clothes"
     },
     {
-      "id": 8,
+      "id": 23,
       "name": "Кроссовки",
       "description": "Комфортные кроссовки для спорта и прогулок.",
-      "price": 5000
+      "price": 5000,
+      "category": "clothes"
     },
     {
-      "id": 9,
+      "id": 24,
       "name": "Шапка",
       "description": "Тёплая шапка для зимних холодов.",
-      "price": 800
+      "price": 800,
+      "category": "clothes"
     },
     {
-      "id": 10,
+      "id": 25,
       "name": "Шорты",
       "description": "Лёгкие шорты для летнего отдыха.",
-      "price": 1500
+      "price": 1500,
+      "category": "clothes"
     },
     {
-      "id": 11,
+      "id": 26,
       "name": "Пальто",
       "description": "Стильное пальто для осенне-зимнего периода.",
-      "price": 7000
+      "price": 7000,
+      "category": "clothes"
     },
     {
-      "id": 12,
+      "id": 27,
       "name": "Галстук",
       "description": "Классический галстук для формальных мероприятий.",
-      "price": 900
+      "price": 900,
+      "category": "clothes"
     },
     {
-      "id": 13,
+      "id": 28,
       "name": "Носки",
       "description": "Удобные носки из дышащего материала.",
-      "price": 300
+      "price": 300,
+      "category": "clothes"
     },
     {
-      "id": 14,
+      "id": 29,
       "name": "Ремень",
       "description": "Качественный ремень из натуральной кожи.",
-      "price": 600
+      "price": 600,
+      "category": "clothes"
     },
     {
-      "id": 15,
+      "id": 30,
       "name": "Сумка",
       "description": "Функциональная сумка для повседневного использования.",
-      "price": 3500
-    }
-  ],
-  "electronics": [
+      "price": 3500,
+      "category": "clothes"
+    },
     {
-      "id": 1,
+      "id": 31,
       "name": "Смартфон",
       "description": "Современный смартфон с высоким разрешением и мощным процессором.",
-      "price": 30000
+      "price": 30000,
+      "category": "electronics"
     },
     {
-      "id": 2,
+      "id": 32,
       "name": "Ноутбук",
       "description": "Мощный ноутбук с большим экраном и высокой производительностью.",
-      "price": 60000
+      "price": 60000,
+      "category": "electronics"
     },
     {
-      "id": 3,
+      "id": 33,
       "name": "Наушники",
       "description": "Беспроводные наушники с качественным звуком и длительным временем работы.",
-      "price": 5000
+      "price": 5000,
+      "category": "electronics"
     },
     {
-      "id": 4,
+      "id": 34,
       "name": "Планшет",
       "description": "Удобный планшет для работы и развлечений с высоким разрешением.",
-      "price": 25000
+      "price": 25000,
+      "category": "electronics"
     },
     {
-      "id": 5,
+      "id": 35,
       "name": "Умные часы",
       "description": "Функциональные умные часы с мониторингом здоровья и уведомлениями.",
-      "price": 12000
+      "price": 12000,
+      "category": "electronics"
     },
     {
-      "id": 6,
+      "id": 36,
       "name": "Фотоаппарат",
       "description": "Качественный фотоаппарат для профессиональной съемки.",
-      "price": 45000
+      "price": 45000,
+      "category": "electronics"
     },
     {
-      "id": 7,
+      "id": 37,
       "name": "Игровая консоль",
       "description": "Современная игровая консоль с поддержкой 4K-графики.",
-      "price": 40000
+      "price": 40000,
+      "category": "electronics"
     },
     {
-      "id": 8,
+      "id": 38,
       "name": "Монитор",
       "description": "Большой монитор с высоким разрешением и быстрым откликом.",
-      "price": 18000
+      "price": 18000,
+      "category": "electronics"
     },
     {
-      "id": 9,
+      "id": 39,
       "name": "Клавиатура",
       "description": "Удобная клавиатура с подсветкой и механическими клавишами.",
-      "price": 3000
+      "price": 3000,
+      "category": "electronics"
     },
     {
-      "id": 10,
+      "id": 40,
       "name": "Мышь",
       "description": "Эргономичная мышь с высокой точностью и скоростью.",
-      "price": 1500
+      "price": 1500,
+      "category": "electronics"
     },
     {
-      "id": 11,
+      "id": 41,
       "name": "Колонка",
       "description": "Портативная колонка с чистым звуком и хорошей мощностью.",
-      "price": 8000
+      "price": 8000,
+      "category": "electronics"
     },
     {
-      "id": 12,
+      "id": 42,
       "name": "Роутер",
       "description": "Современный роутер с высокой скоростью передачи данных.",
-      "price": 2500
+      "price": 2500,
+      "category": "electronics"
     },
     {
-      "id": 13,
+      "id": 43,
       "name": "Внешний жесткий диск",
       "description": "Внешний жесткий диск для хранения больших объемов данных.",
-      "price": 5000
+      "price": 5000,
+      "category": "electronics"
     },
     {
-      "id": 14,
+      "id": 44,
       "name": "Микрофон",
       "description": "Качественный микрофон для записи голоса и музыки.",
-      "price": 7000
+      "price": 7000,
+      "category": "electronics"
     },
     {
-      "id": 15,
+      "id": 45,
       "name": "Камера видеонаблюдения",
       "description": "Надежная камера видеонаблюдения с ночным видением.",
-      "price": 10000
+      "price": 10000,
+      "category": "electronics"
     }
   ]
 }

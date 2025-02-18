@@ -2,6 +2,9 @@ import "./header.css";
 import { NavLink } from "react-router";
 
 export function Header() {
+  const showBasket = () => {
+    console.log("показать корзину");
+  };
   return (
     <>
       <header>
@@ -18,6 +21,10 @@ export function Header() {
             </li>
             <li>
               <NavLink to="/electronics">Электроника</NavLink>
+            </li>
+
+            <li className="basket" onClick={showBasket}>
+              Корзина
             </li>
           </ul>
         </nav>
