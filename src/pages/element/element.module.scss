@@ -1,4 +1,4 @@
-.elementWrapper {
+.wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -7,7 +7,7 @@
   flex-direction: column;
 }
 
-.elementList {
+.list {
   display: flex;
   height: 100%;
   gap: 20px;
@@ -15,7 +15,7 @@
   justify-content: space-evenly;
 }
 
-.productItem {
+.item {
   display: flex;
   flex-direction: column;
   justify-content: center;

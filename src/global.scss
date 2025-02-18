@@ -1,3 +1,8 @@
+$background-color: #45744d;
+$second-background: #9d9999;
+$text-color: #ffffff;
+$first-color: #daad86;
+
 #root {
   display: flex;
   flex-direction: column;
@@ -13,8 +18,8 @@
 }
 
 body {
-  background-color: #45744d;
-  color: #ffffff;
+  background-color: $background-color;
+  color: $text-color;
 }
 
 ul {
@@ -25,27 +30,27 @@ ul {
 a {
   text-decoration: none;
   display: inline-block;
-  color: #ffffff;
+  color: $text-color;
 }
 
 a:visited {
-  color: #ffffff;
+  color: $text-color;
 }
 
 a:hover {
   transform: scale(1.1);
-  color: #daad86;
+  color: $first-color;
 }
 
 button {
   cursor: pointer;
-  background-color: #9d9999;
+  background-color: $second-background;
   border: none;
   padding: 4px;
-  color: #ffffff;
+  color: $text-color;
 }
 
 button:hover {
   transform: scale(1.1);
-  background-color: #daad86;
+  background-color: $first-color;
 }

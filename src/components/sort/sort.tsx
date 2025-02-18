@@ -1,4 +1,4 @@
-import "./sort.css";
+import styles from "./sort.module.scss";
 import { IProduct } from "../../types/productInterface";
 import { useState } from "react";
 
@@ -44,12 +44,12 @@ export function Sort({
   };
 
   return (
-    <div className="sortWrapper">
+    <div className={styles.wrapper}>
       <span>Сортировать по : </span>
-      <button className="sortButton" onClick={sortByName}>
+      <button className={styles.button} onClick={sortByName}>
         Имя
       </button>
-      <button className="sortButton" onClick={sortByPrice}>
+      <button className={styles.button} onClick={sortByPrice}>
         Цена
       </button>
     </div>

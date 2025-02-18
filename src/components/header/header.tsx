@@ -1,5 +1,5 @@
+import styles from "./header.module.scss";
 import { useState } from "react";
-import "./header.css";
 import { NavLink } from "react-router";
 import { Basket } from "./basket/basket";
 
@@ -10,7 +10,7 @@ export function Header() {
     <>
       <header>
         <nav>
-          <ul className="navHeader">
+          <ul className={styles.nav}>
             <li>
               <NavLink to="/">Сброс</NavLink>
             </li>
@@ -23,8 +23,8 @@ export function Header() {
             <li>
               <NavLink to="/electronics">Электроника</NavLink>
             </li>
-            <li className="basket" onClick={showBasket}>
-              Избранное
+            <li className={styles.basket} onClick={showBasket}>
+              Корзина
             </li>
           </ul>
         </nav>

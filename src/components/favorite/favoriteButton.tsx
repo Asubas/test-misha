@@ -1,4 +1,4 @@
-import "./favoriteButton.css";
+import styles from "./favoriteButton.module.scss";
 import { useDispatch } from "react-redux";
 import { addToFavorite, removeFromFavorite } from "../../store/elementSlice";
 import { IProduct } from "../../types/productInterface";
@@ -28,7 +28,9 @@ export function FavoriteButton({ product }: { product: IProduct }) {
   }, [favoriteProducts, product]);
   return (
     <button
-      className={like ? "likeProduct addToFavorite" : "addToFavorite"}
+      className={
+        like ? `${styles.like} ${styles.favorite}` : `${styles.favorite}`
+      }
       onClick={addedToFavorite}
     />
   );

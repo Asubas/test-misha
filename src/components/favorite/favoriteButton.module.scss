@@ -1,4 +1,4 @@
-.addToFavorite {
+.favorite {
   width: 30px;
   height: 30px;
   position: relative;
@@ -10,12 +10,11 @@
   right: 1%;
 }
 
-.addToFavorite:hover,
-.removeFromFavorite:hover {
+.favorite:hover {
   background-color: inherit;
 }
 
-.addToFavorite::after {
+.favorite::after {
   content: "";
   width: 100%;
   height: 100%;
@@ -27,7 +26,7 @@
     contain;
 }
 
-.likeProduct.addToFavorite::after {
+.like.favorite::after {
   background: url("../../assets/heart-tick-svgrepo-com.svg") no-repeat center /
     contain;
 }

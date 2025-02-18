@@ -1,17 +1,19 @@
-.paginationWrapper {
+$first-color: #daad86;
+
+.wrapper {
   width: 25%;
   margin: 10px;
 }
 
-.paginationList {
+.list {
   display: flex;
   justify-content: space-evenly;
 }
 
-.paginationItem {
+.item {
   width: 25px;
 }
 
 .activeButton {
-  background-color: #daad86;
+  background-color: $first-color;
 }

@@ -1,5 +1,5 @@
+import "./global.scss";
 import { StrictMode } from "react";
-import "./global.css";
 import App from "./App.tsx";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter, Route, Routes } from "react-router";

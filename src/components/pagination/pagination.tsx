@@ -1,4 +1,4 @@
-import "./pagination.css";
+import styles from "./pagination.module.scss";
 
 export function Pagination({
   currentPage,
@@ -15,13 +15,13 @@ export function Pagination({
   }
 
   return (
-    <nav className="paginationWrapper">
-      <ul className="paginationList">
+    <nav className={styles.wrapper}>
+      <ul className={styles.list}>
         {pageNumbers.map((number) => (
           <li key={number}>
             <button
-              className={`paginationItem ${
-                currentPage === number ? "activeButton" : ""
+              className={`${styles.item} ${
+                currentPage === number ? styles.activeButton : ""
               }`}
               onClick={() => paginate(number)}
               aria-label={`Перейти на страницу ${number}`}

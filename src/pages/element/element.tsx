@@ -1,4 +1,4 @@
-import "./element.css";
+import styles from "./element.module.scss";
 import { useParams } from "react-router";
 import { useEffect, useMemo, useState } from "react";
 import { Pagination } from "../../components/pagination/pagination";
@@ -29,7 +29,7 @@ export function Element() {
   return (
     <>
       {products.length > 0 ? (
-        <div className="elementWrapper">
+        <div className={styles.wrapper}>
           <Sort
             prod={products}
             sortProducts={(sorted) => {
@@ -37,12 +37,12 @@ export function Element() {
               setCurrentPage(1);
             }}
           />
-          <ul className="elementList">
+          <ul className={styles.list}>
             {currentProducts.map((product) => (
-              <li className="productItem" key={product.id}>
+              <li className={styles.item} key={product.id}>
                 {product.name}
-                <p className="productDescription">{product.description}</p>
-                <p className="productPrice">{product.price} руб</p>
+                <p className={styles.description}>{product.description}</p>
+                <p className={styles.price}>{product.price} руб</p>
                 <FavoriteButton product={product} />
               </li>
             ))}

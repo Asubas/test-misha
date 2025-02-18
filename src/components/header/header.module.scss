@@ -1,10 +1,12 @@
+$first-color: #daad86;
+
 header {
   width: 100%;
   min-height: 50px;
   border-bottom: 1px solid #000000;
 }
 
-.navHeader {
+.nav {
   display: flex;
   justify-content: space-evenly;
   width: 100%;
@@ -16,5 +18,5 @@ header {
 }
 
 .basket:hover {
-  color: #daad86;
+  color: $first-color;
 }

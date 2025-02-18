@@ -1,6 +1,6 @@
+import styles from "./basket.module.scss";
 import { useAppDispatch, useAppSelector } from "../../../hooks";
 import { removeFromFavorite } from "../../../store/elementSlice";
-import "./basket.css";
 
 export function Basket({ activeBasket }: { activeBasket: boolean }) {
   const favoriteProducts = useAppSelector((state) => state.elements.favorites);
@@ -11,21 +11,25 @@ export function Basket({ activeBasket }: { activeBasket: boolean }) {
 
   return (
     <>
-      <div className={activeBasket ? "basketSideBar" : "active basketSideBar"}>
-        <p className="basketSideBarTitle">Избранные продукты</p>
+      <div
+        className={
+          activeBasket ? styles.basket : `${styles.active} ${styles.basket}`
+        }
+      >
+        <p className={styles.title}>Избранные продукты</p>
         {favoriteProducts.length > 0 ? (
           favoriteProducts.map((product) => (
-            <div className="basketSideBarProduct" key={product.id}>
-              <span className="productName">{product.name}</span>
-              <span className="productPrice">{product.price} руб</span>
+            <div className={styles.product} key={product.id}>
+              <span className={styles.name}>{product.name}</span>
+              <span className={styles.price}>{product.price} руб</span>
               <button
-                className="removeFromFavorite"
+                className={styles.remove}
                 onClick={() => removeProduct(product.id)}
               />
             </div>
           ))
         ) : (
-          <p className="emptyBasket">Нет избранных продуктов</p>
+          <p className={styles.empty}>Нет избранных продуктов</p>
         )}
       </div>
     </>
