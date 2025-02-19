@@ -3,7 +3,7 @@ import { StrictMode } from "react";
 import App from "./App.tsx";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter, Route, Routes } from "react-router";
-import { Product } from "./pages/element/product.tsx";
+import { Product } from "./pages/product/product.tsx";
 import { Provider } from "react-redux";
 import { store } from "./store/index.ts";
 

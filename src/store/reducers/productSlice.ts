@@ -4,7 +4,7 @@ import { fetchProducts } from "./actionCreators";
 
 interface ProductState {
   products: IProduct[];
-  favorites: IProduct[];
+  favorites: number[];
   isLoading: boolean;
   error: string | unknown;
 }
@@ -22,16 +22,14 @@ const productsSlice = createSlice({
   reducers: {
     addToFavorite(state, action) {
       const someProduct = state.favorites.some(
-        (product) => product.id === action.payload.id
+        (id) => id === action.payload.id
       );
       if (!someProduct) {
         state.favorites.push(action.payload);
       }
     },
     removeFromFavorite(state, action: PayloadAction<number>) {
-      state.favorites = state.favorites.filter(
-        (product) => product.id !== action.payload
-      );
+      state.favorites = state.favorites.filter((id) => id !== action.payload);
     },
   },
   extraReducers: (builder) => {

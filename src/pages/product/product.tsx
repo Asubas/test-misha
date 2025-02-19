@@ -2,7 +2,7 @@ import styles from "./product.module.scss";
 import { useEffect } from "react";
 import { Pagination } from "../../components/pagination/pagination";
 import { Sort } from "../../components/sort/sort";
-// import { FavoriteButton } from "../../components/favorite/favoriteButton";
+import { FavoriteButton } from "../../components/favorite/favoriteButton";
 import { useAppDispatch, useAppSelector } from "../../hooks";
 import { fetchProducts } from "../../store/reducers/actionCreators";
 import { useParams } from "react-router";
@@ -39,7 +39,7 @@ export function Product() {
                 {product.name}
                 <p className={styles.description}>{product.description}</p>
                 <p className={styles.price}>{product.price} руб</p>
-                {/* <FavoriteButton product={product} /> */}
+                <FavoriteButton id={product.id} />
               </li>
             ))}
           </ul>

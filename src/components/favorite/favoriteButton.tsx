@@ -4,35 +4,26 @@ import {
   addToFavorite,
   removeFromFavorite,
 } from "../../store/reducers/productSlice";
-import { IProduct } from "../../types/productInterface";
-import { useEffect, useState } from "react";
 import { useAppSelector } from "../../hooks";
 
-export function FavoriteButton({ product }: { product: IProduct }) {
+export function FavoriteButton({ id }: { id: number }) {
   const favoriteProducts = useAppSelector((state) => state.products.favorites);
 
-  const [like, setLike] = useState(false);
   const dispatch = useDispatch();
   const addedToFavorite = () => {
-    if (like) {
-      dispatch(removeFromFavorite(product.id));
+    if (favoriteProducts.includes(id)) {
+      dispatch(removeFromFavorite(id));
     } else {
-      dispatch(addToFavorite(product));
+      dispatch(addToFavorite(id));
     }
-    setLike((val) => !val);
   };
 
-  useEffect(() => {
-    if (favoriteProducts.includes(product)) {
-      setLike(true);
-    } else {
-      setLike(false);
-    }
-  }, [favoriteProducts, product]);
   return (
     <button
       className={
-        like ? `${styles.like} ${styles.favorite}` : `${styles.favorite}`
+        favoriteProducts.includes(id)
+          ? `${styles.like} ${styles.favorite}`
+          : `${styles.favorite}`
       }
       onClick={addedToFavorite}
     />
