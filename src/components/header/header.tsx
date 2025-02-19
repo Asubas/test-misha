@@ -1,5 +1,5 @@
 import styles from "./header.module.scss";
-import { NavLink } from "react-router";
+import { Link } from "react-router";
 import { BasketWrapper } from "./basket/basketWrapper";
 
 export function Header() {
@@ -9,16 +9,16 @@ export function Header() {
         <nav>
           <ul className={styles.nav}>
             <li>
-              <NavLink to="/">Сброс</NavLink>
+              <Link to="/">Сброс</Link>
             </li>
             <li>
-              <NavLink to="/food">Еда</NavLink>
+              <Link to="/food">Еда</Link>
             </li>
             <li>
-              <NavLink to="/clothes">Одежда</NavLink>
+              <Link to="/clothes">Одежда</Link>
             </li>
             <li>
-              <NavLink to="/electronics">Электроника</NavLink>
+              <Link to="/electronics">Электроника</Link>
             </li>
             <li>
               <BasketWrapper />
