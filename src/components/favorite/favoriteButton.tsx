@@ -1,6 +1,9 @@
 import styles from "./favoriteButton.module.scss";
 import { useDispatch } from "react-redux";
-import { addToFavorite, removeFromFavorite } from "../../store/productSlice";
+import {
+  addToFavorite,
+  removeFromFavorite,
+} from "../../store/reducers/productSlice";
 import { IProduct } from "../../types/productInterface";
 import { useEffect, useState } from "react";
 import { useAppSelector } from "../../hooks";
