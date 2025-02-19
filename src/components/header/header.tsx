@@ -1,11 +1,8 @@
 import styles from "./header.module.scss";
-import { useState } from "react";
 import { NavLink } from "react-router";
-import { Basket } from "./basket/basket";
+import { BasketWrapper } from "./basket/basketWrapper";
 
 export function Header() {
-  const [activeBasket, setActiveBasket] = useState(false);
-  const showBasket = () => setActiveBasket((val) => !val);
   return (
     <>
       <header>
@@ -23,12 +20,11 @@ export function Header() {
             <li>
               <NavLink to="/electronics">Электроника</NavLink>
             </li>
-            <li className={styles.basket} onClick={showBasket}>
-              Корзина
+            <li>
+              <BasketWrapper />
             </li>
           </ul>
         </nav>
-        <Basket activeBasket={activeBasket} />
       </header>
     </>
   );

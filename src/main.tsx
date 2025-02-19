@@ -10,14 +10,14 @@ import { store } from "./store/index.ts";
 const root = document.getElementById("root");
 ReactDOM.createRoot(root as HTMLElement).render(
   <StrictMode>
-    <Provider store={store}>
-      <BrowserRouter>
+    <BrowserRouter>
+      <Provider store={store}>
         <Routes>
           <Route path="/" element={<App />}>
             <Route path=":element" element={<Element />} />
           </Route>
         </Routes>
-      </BrowserRouter>
-    </Provider>
+      </Provider>
+    </BrowserRouter>
   </StrictMode>
 );

@@ -1,4 +1,5 @@
 $second-background: #9d9999;
+$first-color: #daad86;
 
 .basket {
   height: 45vh;
@@ -70,4 +71,12 @@ $second-background: #9d9999;
   transform: translate(-50%, -50%);
   background: url("../../../assets/heart-remove-svgrepo-com.svg") no-repeat
     center / contain;
+}
+
+.basketWrapper {
+  cursor: pointer;
+}
+
+.basketWrapper:hover {
+  color: $first-color;
 }
