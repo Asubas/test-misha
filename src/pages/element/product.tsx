@@ -1,12 +1,13 @@
 import styles from "./product.module.scss";
 import { useEffect } from "react";
 import { Pagination } from "../../components/pagination/pagination";
-// import { Sort } from "../../components/sort/sort";
+import { Sort } from "../../components/sort/sort";
 // import { FavoriteButton } from "../../components/favorite/favoriteButton";
 import { useAppDispatch, useAppSelector } from "../../hooks";
 import { fetchProducts } from "../../store/reducers/actionCreators";
 import { useParams } from "react-router";
 import { usePagination } from "../../utils/usePagination";
+import { useSortProducts } from "../../utils/useSortProducts";
 
 export function Product() {
   const dispatch = useAppDispatch();
@@ -14,11 +15,11 @@ export function Product() {
     (state) => state.products
   );
   const params = useParams();
+  const { sortedProducts, sortByName, sortByPrice } = useSortProducts(products);
   const { currentItems, currentPage, setCurrentPage } = usePagination(
-    products,
+    sortedProducts,
     4
   );
-  // const [sortedProducts, setSortedProducts] = useState<IProduct[]>([]);
 
   useEffect(() => {
     if (params.element) dispatch(fetchProducts(params.element));
@@ -31,13 +32,7 @@ export function Product() {
     <>
       {products.length > 0 ? (
         <div className={styles.wrapper}>
-          {/* <Sort
-            prod={products}
-            sortProducts={(sorted) => {
-              setSortedProducts(sorted);
-              setCurrentPage(1);
-            }}
-          /> */}
+          <Sort sortByName={sortByName} sortByPrice={sortByPrice} />
           <ul className={styles.list}>
             {currentItems.map((product) => (
               <li className={styles.item} key={product.id}>
