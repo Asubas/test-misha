@@ -1,11 +1,12 @@
 import styles from "./product.module.scss";
 import { useEffect } from "react";
-// import { Pagination } from "../../components/pagination/pagination";
+import { Pagination } from "../../components/pagination/pagination";
 // import { Sort } from "../../components/sort/sort";
 // import { FavoriteButton } from "../../components/favorite/favoriteButton";
 import { useAppDispatch, useAppSelector } from "../../hooks";
 import { fetchProducts } from "../../store/reducers/actionCreators";
 import { useParams } from "react-router";
+import { usePagination } from "../../utils/usePagination";
 
 export function Product() {
   const dispatch = useAppDispatch();
@@ -13,27 +14,21 @@ export function Product() {
     (state) => state.products
   );
   const params = useParams();
-  // const [currentPage, setCurrentPage] = useState(1);
+  const { currentItems, currentPage, setCurrentPage } = usePagination(
+    products,
+    4
+  );
   // const [sortedProducts, setSortedProducts] = useState<IProduct[]>([]);
-
-  // useEffect(() => {
-  //   setSortedProducts(filteredProducts);
-  //   setCurrentPage(1);
-  // }, [filteredProducts]);
 
   useEffect(() => {
     if (params.element) dispatch(fetchProducts(params.element));
-  }, [dispatch, params.element]);
+    setCurrentPage(1);
+  }, [dispatch, params.element, setCurrentPage]);
 
-  // const itemsPerPage = 4;
-  // const startIndex = (currentPage - 1) * itemsPerPage;
-  // const endIndex = startIndex + itemsPerPage;
-  // const currentProducts = sortedProducts.slice(startIndex, endIndex);
-
+  if (isLoading) return <h1>Идет загрузка...</h1>;
+  if (error) return <h1>Ошибка загрузки данных</h1>;
   return (
     <>
-      {isLoading && <h1>Идет загрузка...</h1>}
-      {error && <h1>Ошибка загрузки данных</h1>}
       {products.length > 0 ? (
         <div className={styles.wrapper}>
           {/* <Sort
@@ -44,7 +39,7 @@ export function Product() {
             }}
           /> */}
           <ul className={styles.list}>
-            {products.map((product) => (
+            {currentItems.map((product) => (
               <li className={styles.item} key={product.id}>
                 {product.name}
                 <p className={styles.description}>{product.description}</p>
@@ -53,11 +48,11 @@ export function Product() {
               </li>
             ))}
           </ul>
-          {/* <Pagination
+          <Pagination
             currentPage={currentPage}
             totalPosts={products.length}
             paginate={(page: number) => setCurrentPage(page)}
-          /> */}
+          />
         </div>
       ) : (
         <div>Список пуст!</div>
