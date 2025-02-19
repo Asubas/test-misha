@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { IProduct } from "../types/productInterface";
 
 export function useSortProducts(products: IProduct[]) {
@@ -35,6 +35,10 @@ export function useSortProducts(products: IProduct[]) {
     setSortOrder({ field: "price", direction });
     setSortedProducts(sortArray);
   };
+
+  useEffect(() => {
+    setSortedProducts(products);
+  }, [products]);
   return {
     sortedProducts,
     sortByName,

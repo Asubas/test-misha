@@ -1,26 +1,23 @@
 import styles from "./basket.module.scss";
 import { useAppDispatch, useAppSelector } from "../../../hooks";
 import { removeFromFavorite } from "../../../store/reducers/productSlice";
-import { useEffect, useState } from "react";
-import { IProduct } from "../../../types/productInterface";
+import { useEffect } from "react";
+import { fetchAllProducts } from "../../../store/reducers/actionCreators";
 
 export function Basket({ activeBasket }: { activeBasket: boolean }) {
-  const favoriteProductsId = useAppSelector(
-    (state) => state.products.favorites
-  );
-  const { products } = useAppSelector((state) => state.products);
-  const [favoriteProducts, setFavoriteProducts] = useState<IProduct[]>([]);
+  const { allProducts, favorites } = useAppSelector((state) => state.products);
   const dispatch = useAppDispatch();
   const removeProduct = (id: number) => {
     dispatch(removeFromFavorite(id));
   };
 
   useEffect(() => {
-    const favoriteItems = products.filter((product) =>
-      favoriteProductsId.includes(product.id)
-    );
-    setFavoriteProducts(favoriteItems);
-  }, [favoriteProductsId, products]);
+    dispatch(fetchAllProducts());
+  }, [dispatch]);
+
+  const favoriteProducts = allProducts.filter((product) =>
+    favorites.includes(product.id)
+  );
 
   return (
     <>

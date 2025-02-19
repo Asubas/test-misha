@@ -1,9 +1,10 @@
 import { PayloadAction, createSlice } from "@reduxjs/toolkit";
 import { IProduct } from "../../types/productInterface";
-import { fetchProducts } from "./actionCreators";
+import { fetchAllProducts, fetchProducts } from "./actionCreators";
 
 interface ProductState {
   products: IProduct[];
+  allProducts: IProduct[];
   favorites: number[];
   isLoading: boolean;
   error: string | unknown;
@@ -11,6 +12,7 @@ interface ProductState {
 
 const initialState: ProductState = {
   products: [],
+  allProducts: [],
   favorites: [],
   isLoading: false,
   error: "",
@@ -48,7 +50,14 @@ const productsSlice = createSlice({
       .addCase(fetchProducts.rejected, (state, action) => {
         state.isLoading = false;
         state.error = action.error;
-      });
+      })
+      .addCase(
+        fetchAllProducts.fulfilled,
+        (state, action: PayloadAction<IProduct[]>) => {
+          state.isLoading = false;
+          state.allProducts = action.payload;
+        }
+      );
   },
 });
 

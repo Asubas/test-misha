@@ -16,11 +16,10 @@ export function Product() {
   );
   const params = useParams();
   const { sortedProducts, sortByName, sortByPrice } = useSortProducts(products);
-  const { currentItems, currentPage, setCurrentPage } = usePagination(
+  const { currentProducts, currentPage, setCurrentPage } = usePagination(
     sortedProducts,
     4
   );
-
   useEffect(() => {
     if (params.element) dispatch(fetchProducts(params.element));
     setCurrentPage(1);
@@ -34,7 +33,7 @@ export function Product() {
         <div className={styles.wrapper}>
           <Sort sortByName={sortByName} sortByPrice={sortByPrice} />
           <ul className={styles.list}>
-            {currentItems.map((product) => (
+            {currentProducts.map((product) => (
               <li className={styles.item} key={product.id}>
                 {product.name}
                 <p className={styles.description}>{product.description}</p>
