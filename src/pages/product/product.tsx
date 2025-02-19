@@ -2,12 +2,12 @@ import styles from "./product.module.scss";
 import { useEffect } from "react";
 import { Pagination } from "../../components/pagination/pagination";
 import { Sort } from "../../components/sort/sort";
-import { FavoriteButton } from "../../components/favorite/favoriteButton";
 import { useAppDispatch, useAppSelector } from "../../hooks";
 import { fetchProducts } from "../../store/reducers/actionCreators";
 import { useParams } from "react-router";
 import { usePagination } from "../../utils/usePagination";
 import { useSortProducts } from "../../utils/useSortProducts";
+import { ProductItem } from "./productItem/productItem";
 
 export function Product() {
   const dispatch = useAppDispatch();
@@ -35,10 +35,7 @@ export function Product() {
           <ul className={styles.list}>
             {currentProducts.map((product) => (
               <li className={styles.item} key={product.id}>
-                {product.name}
-                <p className={styles.description}>{product.description}</p>
-                <p className={styles.price}>{product.price} руб</p>
-                <FavoriteButton id={product.id} />
+                <ProductItem product={product} />
               </li>
             ))}
           </ul>
