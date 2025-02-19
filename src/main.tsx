@@ -3,7 +3,7 @@ import { StrictMode } from "react";
 import App from "./App.tsx";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter, Route, Routes } from "react-router";
-import { Element } from "./pages/element/element.tsx";
+import { Product } from "./pages/element/product.tsx";
 import { Provider } from "react-redux";
 import { store } from "./store/index.ts";
 
@@ -14,7 +14,7 @@ ReactDOM.createRoot(root as HTMLElement).render(
       <Provider store={store}>
         <Routes>
           <Route path="/" element={<App />}>
-            <Route path=":element" element={<Element />} />
+            <Route path=":element" element={<Product />} />
           </Route>
         </Routes>
       </Provider>

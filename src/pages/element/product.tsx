@@ -1,4 +1,4 @@
-import styles from "./element.module.scss";
+import styles from "./product.module.scss";
 import { useEffect } from "react";
 // import { Pagination } from "../../components/pagination/pagination";
 // import { Sort } from "../../components/sort/sort";
@@ -7,7 +7,7 @@ import { useAppDispatch, useAppSelector } from "../../hooks";
 import { fetchProducts } from "../../store/reducers/actionCreators";
 import { useParams } from "react-router";
 
-export function Element() {
+export function Product() {
   const dispatch = useAppDispatch();
   const { products, isLoading, error } = useAppSelector(
     (state) => state.products
