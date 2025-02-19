@@ -1,18 +1,18 @@
 import { PayloadAction, createSlice } from "@reduxjs/toolkit";
-import { getProducts } from "../utils/getProducts";
 import { IProduct } from "../types/productInterface";
 
-interface ElementState {
-  elements: IProduct[];
+interface ProductState {
+  products: IProduct[];
   favorites: IProduct[];
 }
 
-const elementSlice = createSlice({
-  name: "element",
+const productsSlice = createSlice({
+  name: "products",
   initialState: {
-    elements: await getProducts(),
+    // elements: await getProducts(),
+    products: [],
     favorites: [],
-  } as ElementState,
+  } as ProductState,
   reducers: {
     addToFavorite(state, action) {
       const someProduct = state.favorites.some(
@@ -30,5 +30,5 @@ const elementSlice = createSlice({
   },
 });
 
-export const { addToFavorite, removeFromFavorite } = elementSlice.actions;
-export default elementSlice.reducer;
+export const { addToFavorite, removeFromFavorite } = productsSlice.actions;
+export default productsSlice.reducer;

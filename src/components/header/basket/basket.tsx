@@ -1,9 +1,9 @@
 import styles from "./basket.module.scss";
 import { useAppDispatch, useAppSelector } from "../../../hooks";
-import { removeFromFavorite } from "../../../store/elementSlice";
+import { removeFromFavorite } from "../../../store/productSlice";
 
 export function Basket({ activeBasket }: { activeBasket: boolean }) {
-  const favoriteProducts = useAppSelector((state) => state.elements.favorites);
+  const favoriteProducts = useAppSelector((state) => state.products.favorites);
   const dispatch = useAppDispatch();
   const removeProduct = (id: number) => {
     dispatch(removeFromFavorite(id));

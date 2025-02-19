@@ -9,7 +9,7 @@ import { IProduct } from "../../types/productInterface";
 
 export function Element() {
   const params = useParams();
-  const allProducts = useAppSelector((state) => state.elements.elements);
+  const allProducts = useAppSelector((state) => state.products.products);
   const products = useMemo(() => {
     return allProducts.filter((product) => product.category === params.element);
   }, [allProducts, params.element]);

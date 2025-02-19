@@ -5,3 +5,9 @@ export interface IProduct {
   price: number;
   category: string;
 }
+
+export interface IProductState {
+  product: IProduct;
+  isLoading: boolean;
+  error: string;
+}
