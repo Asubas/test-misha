@@ -1,18 +1,24 @@
 import { PayloadAction, createSlice } from "@reduxjs/toolkit";
 import { IProduct } from "../../types/productInterface";
+import { fetchProducts } from "./actionCreators";
 
 interface ProductState {
   products: IProduct[];
   favorites: IProduct[];
+  isLoading: boolean;
+  error: string | unknown;
 }
+
+const initialState: ProductState = {
+  products: [],
+  favorites: [],
+  isLoading: false,
+  error: "",
+};
 
 const productsSlice = createSlice({
   name: "products",
-  initialState: {
-    // elements: await getProducts(),
-    products: [],
-    favorites: [],
-  } as ProductState,
+  initialState,
   reducers: {
     addToFavorite(state, action) {
       const someProduct = state.favorites.some(
@@ -27,6 +33,24 @@ const productsSlice = createSlice({
         (product) => product.id !== action.payload
       );
     },
+  },
+  extraReducers: (builder) => {
+    builder
+      .addCase(fetchProducts.pending, (state) => {
+        state.isLoading = true;
+        state.error = "";
+      })
+      .addCase(
+        fetchProducts.fulfilled,
+        (state, action: PayloadAction<IProduct[]>) => {
+          state.isLoading = false;
+          state.products = action.payload;
+        }
+      )
+      .addCase(fetchProducts.rejected, (state, action) => {
+        state.isLoading = false;
+        state.error = action.error;
+      });
   },
 });
 
