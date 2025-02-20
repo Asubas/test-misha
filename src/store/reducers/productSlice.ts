@@ -5,7 +5,6 @@ import { fetchAllProducts, fetchProducts } from "./actionCreators";
 interface ProductState {
   products: IProduct[];
   allProducts: IProduct[];
-  favorites: number[];
   isLoading: boolean;
   error: string | unknown;
 }
@@ -13,7 +12,6 @@ interface ProductState {
 const initialState: ProductState = {
   products: [],
   allProducts: [],
-  favorites: [],
   isLoading: false,
   error: "",
 };
@@ -21,19 +19,7 @@ const initialState: ProductState = {
 const productsSlice = createSlice({
   name: "products",
   initialState,
-  reducers: {
-    addToFavorite(state, action) {
-      const someProduct = state.favorites.some(
-        (id) => id === action.payload.id
-      );
-      if (!someProduct) {
-        state.favorites.push(action.payload);
-      }
-    },
-    removeFromFavorite(state, action: PayloadAction<number>) {
-      state.favorites = state.favorites.filter((id) => id !== action.payload);
-    },
-  },
+  reducers: {},
   extraReducers: (builder) => {
     builder
       .addCase(fetchProducts.pending, (state) => {
@@ -61,5 +47,4 @@ const productsSlice = createSlice({
   },
 });
 
-export const { addToFavorite, removeFromFavorite } = productsSlice.actions;
 export default productsSlice.reducer;

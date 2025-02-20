@@ -1,11 +1,12 @@
 import styles from "./basket.module.scss";
 import { useAppDispatch, useAppSelector } from "../../../hooks";
-import { removeFromFavorite } from "../../../store/reducers/productSlice";
 import { useEffect } from "react";
 import { fetchAllProducts } from "../../../store/reducers/actionCreators";
+import { removeFromFavorite } from "../../../store/reducers/favoriteSlice";
 
 export function Basket({ activeBasket }: { activeBasket: boolean }) {
-  const { allProducts, favorites } = useAppSelector((state) => state.products);
+  const { allProducts } = useAppSelector((state) => state.products);
+  const favorites = useAppSelector((state) => state.favorites.favoritesID);
   const dispatch = useAppDispatch();
   const removeProduct = (id: number) => {
     dispatch(removeFromFavorite(id));

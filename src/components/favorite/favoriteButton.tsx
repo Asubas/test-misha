@@ -1,13 +1,16 @@
 import styles from "./favoriteButton.module.scss";
 import { useDispatch } from "react-redux";
+
+import { useAppSelector } from "../../hooks";
 import {
   addToFavorite,
   removeFromFavorite,
-} from "../../store/reducers/productSlice";
-import { useAppSelector } from "../../hooks";
+} from "../../store/reducers/favoriteSlice";
 
 export function FavoriteButton({ id }: { id: number }) {
-  const favoriteProducts = useAppSelector((state) => state.products.favorites);
+  const favoriteProducts = useAppSelector(
+    (state) => state.favorites.favoritesID
+  );
 
   const dispatch = useDispatch();
   const addedToFavorite = () => {
