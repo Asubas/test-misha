@@ -1,35 +1,32 @@
 import styles from "./favoriteButton.module.scss";
 import { useDispatch } from "react-redux";
-import { addToFavorite, removeFromFavorite } from "../../store/elementSlice";
-import { IProduct } from "../../types/productInterface";
-import { useEffect, useState } from "react";
+
 import { useAppSelector } from "../../hooks";
+import {
+  addToFavorite,
+  removeFromFavorite,
+} from "../../store/reducers/favoriteSlice";
 
-export function FavoriteButton({ product }: { product: IProduct }) {
-  const favoriteProducts = useAppSelector((state) => state.elements.favorites);
+export function FavoriteButton({ id }: { id: number }) {
+  const favoriteProducts = useAppSelector((state) =>
+    state.favorites.favoritesID.includes(id)
+  );
 
-  const [like, setLike] = useState(false);
   const dispatch = useDispatch();
   const addedToFavorite = () => {
-    if (like) {
-      dispatch(removeFromFavorite(product.id));
+    if (favoriteProducts) {
+      dispatch(removeFromFavorite(id));
     } else {
-      dispatch(addToFavorite(product));
+      dispatch(addToFavorite(id));
     }
-    setLike((val) => !val);
   };
 
-  useEffect(() => {
-    if (favoriteProducts.includes(product)) {
-      setLike(true);
-    } else {
-      setLike(false);
-    }
-  }, [favoriteProducts, product]);
   return (
     <button
       className={
-        like ? `${styles.like} ${styles.favorite}` : `${styles.favorite}`
+        favoriteProducts
+          ? `${styles.like} ${styles.favorite}`
+          : `${styles.favorite}`
       }
       onClick={addedToFavorite}
     />

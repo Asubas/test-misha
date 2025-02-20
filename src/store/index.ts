@@ -1,9 +1,11 @@
 import { configureStore } from "@reduxjs/toolkit";
-import elementReducer from "./elementSlice";
+import productsReducer from "./reducers/productSlice";
+import favoritesIDReducer from "./reducers/favoriteSlice";
 
 export const store = configureStore({
   reducer: {
-    elements: elementReducer,
+    products: productsReducer,
+    favorites: favoritesIDReducer,
   },
 });
 
