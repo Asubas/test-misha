@@ -1,4 +1,4 @@
-import styles from "./product.module.scss";
+import styles from "./productsSection.module.scss";
 import { useEffect } from "react";
 import { Pagination } from "../../components/pagination/pagination";
 import { Sort } from "../../components/sort/sort";
@@ -7,9 +7,9 @@ import { fetchProducts } from "../../store/reducers/actionCreators";
 import { useParams } from "react-router";
 import { usePagination } from "../../utils/usePagination";
 import { useSortProducts } from "../../utils/useSortProducts";
-import { ProductItem } from "./productItem/productItem";
+import { ProductList } from "./productItem/productList";
 
-export function Product() {
+export function ProductsSection() {
   const dispatch = useAppDispatch();
   const { products, isLoading, error } = useAppSelector(
     (state) => state.products
@@ -29,16 +29,10 @@ export function Product() {
   if (error) return <h1>Ошибка загрузки данных</h1>;
   return (
     <>
-      {products.length > 0 ? (
+      {products ? (
         <div className={styles.wrapper}>
           <Sort sortByName={sortByName} sortByPrice={sortByPrice} />
-          <ul className={styles.list}>
-            {currentProducts.map((product) => (
-              <li className={styles.item} key={product.id}>
-                <ProductItem product={product} />
-              </li>
-            ))}
-          </ul>
+          <ProductList products={currentProducts} />
           <Pagination
             currentPage={currentPage}
             totalPosts={products.length}

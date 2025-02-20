@@ -8,13 +8,13 @@ import {
 } from "../../store/reducers/favoriteSlice";
 
 export function FavoriteButton({ id }: { id: number }) {
-  const favoriteProducts = useAppSelector((state) =>
+  const isFavorite = useAppSelector((state) =>
     state.favorites.favoritesID.includes(id)
   );
 
   const dispatch = useDispatch();
   const addedToFavorite = () => {
-    if (favoriteProducts) {
+    if (isFavorite) {
       dispatch(removeFromFavorite(id));
     } else {
       dispatch(addToFavorite(id));
@@ -24,9 +24,7 @@ export function FavoriteButton({ id }: { id: number }) {
   return (
     <button
       className={
-        favoriteProducts
-          ? `${styles.like} ${styles.favorite}`
-          : `${styles.favorite}`
+        isFavorite ? `${styles.like} ${styles.favorite}` : `${styles.favorite}`
       }
       onClick={addedToFavorite}
     />
