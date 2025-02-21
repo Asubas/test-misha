@@ -7,9 +7,7 @@ export const favoritesIDlice = createSlice({
   },
   reducers: {
     addToFavorite(state, action) {
-      const someProduct = state.favoritesID.some(
-        (id) => id === action.payload.id
-      );
+      const someProduct = state.favoritesID.some((id) => id === action.payload);
       if (!someProduct) {
         state.favoritesID.push(action.payload);
       }
