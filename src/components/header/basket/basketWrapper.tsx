@@ -1,8 +1,8 @@
 import styles from "./basket.module.scss";
-import { useState } from "react";
+import { memo, useState } from "react";
 import { Basket } from "./basket";
 
-export function BasketWrapper() {
+export const BasketWrapper = memo(() => {
   const [activeBasket, setActiveBasket] = useState(false);
   const showBasket = () => setActiveBasket((val) => !val);
   return (
@@ -14,4 +14,4 @@ export function BasketWrapper() {
       <Basket activeBasket={activeBasket} />
     </>
   );
-}
+});

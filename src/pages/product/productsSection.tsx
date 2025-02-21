@@ -7,7 +7,7 @@ import { fetchProducts } from "../../store/reducers/actionCreators";
 import { useParams } from "react-router";
 import { usePagination } from "../../utils/usePagination";
 import { useSortProducts } from "../../utils/useSortProducts";
-import { ProductList } from "./productItem/productList";
+import { ProductList } from "./productList/productList";
 
 export function ProductsSection() {
   const dispatch = useAppDispatch();
